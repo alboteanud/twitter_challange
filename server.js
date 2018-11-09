@@ -1,7 +1,6 @@
 var spawn = require('child_process').spawn;
 
 const isWindows = /^win/.test(process.platform); 
-
 spawn(isWindows ? 'twitter-proxy.cmd' : 'twitter-proxy');
 spawn(isWindows ? 'http-server.cmd' : 'http-server');
 
