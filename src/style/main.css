@@ -134,3 +134,11 @@ footer {
     }
 
 }
+
+.padded {
+    padding: 0 10%;
+}
+
+.back-link {
+    padding-bottom: 10%;
+}

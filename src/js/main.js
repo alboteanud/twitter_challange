@@ -5,7 +5,6 @@ const TARGET_ID = 'target_id';
 const PROXY_URL = 'http://localhost:7890';
 const USER_TIMELIN_URL = `${PROXY_URL}/1.1/statuses/user_timeline.json\?count\=${NUMBER_OF_REQUESTED_TWEETS}\&screen_name\=`;
 
-
 document.addEventListener('DOMContentLoaded', (event) => {
     USERS.forEach(user => fetchTweets(user, (user, tweets) => setTweetsList(user, tweets)))
 });
@@ -62,7 +61,7 @@ function createTweetHTML(tweetJson) {
 
 function handleDragStart(ev) {
     ev.dataTransfer.setData(TARGET_ID, ev.target.id);
-    console.log(ev.target.id);
+    // console.log(ev.target.id);
 }
 
 function handleDragOver(ev) {

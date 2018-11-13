@@ -1,11 +1,19 @@
 {
-  "name": "makeschoool-challenge",
+  "name": "twitter-list",
+  "version": "1.0.0",
+  "description": "a website for a coding challange",
+  "main": "index.js",
+  "scripts": {
+    "copy": "copyfiles -u 1 src/**/**/* src/**/* src/* build",
+    "build": "npm run copy && workbox injectManifest workbox-config.js",
+    "start": "npm run build && node server.js"
+  },
+  "author": "Dan Alboteanu",
   "dependencies": {
-    "http-server": "^0.9.0",
+    "child_process": "^1.0.2",
+    "copyfiles": "^1.2.0",
+    "express": "^4.16.4",
     "twitter-proxy": "^2.0.0",
     "workbox-cli": "^3.6.3"
-  },
-  "scripts": {
-    "start": "node server.js"
   }
 }

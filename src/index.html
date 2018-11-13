@@ -1,16 +1,16 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#2196F3">
     <link rel="manifest" href="/manifest.json">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-    
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/main.css">
-    
+
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="style/main.css">
+
     <title>Twitter list</title>
 </head>
 
@@ -21,13 +21,13 @@
             <h1>Twitter list</h1>
         </nav>
     </header>
-    
+
     <main>
-        
         <div id="container"> </div>
 
         <template id="column_template">
-            <div  class="column" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+            <div class="column" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)"
+                ondrop="handleDrop(event)">
 
                 <div class="profile-container">
                     <img class="profile-img" src="" alt="Profile image">
@@ -45,22 +45,28 @@
                 <p class="tweet_text"></p>
                 <h6 class="tweet_date"></h6>
                 <a class="tweet_link">Go to tweet</a>
-                
+
                 <a class="tweet_retweet">Retweet</a>
             </li>
         </template>
-    
-</main>
-<script> src="js/registerSW.js"</script>
-<script src="js/utils.js"></script>
-<script src="js/main.js"></script>
 
-<footer>
-    Copyright (c) 2018
-    <a href="/">
-        <strong>Twitter list</strong> <br>
-    </a> All Rights Reserved.
-</footer>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            })
+        }
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+
+    <footer>
+        Copyright (c) 2018
+        <a href="/">
+            <strong>Twitter list</strong> <br>
+        </a> All Rights Reserved.
+    </footer>
 
 </body>
 
