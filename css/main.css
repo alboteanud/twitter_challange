@@ -29,7 +29,6 @@ nav h1 {
     padding: 0.5em 0;
 }
 
-
 #container {
 
     padding: 16px;
@@ -49,8 +48,9 @@ nav h1 {
 .column:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.column .profile-container{
-   margin-bottom: 8px;
+
+.column .profile-container {
+    margin-bottom: 8px;
 }
 
 .column .profile-img {
@@ -61,8 +61,6 @@ nav h1 {
     display: inline-block;
     margin-left: 1em;
 }
-
-
 
 .column ul {
     list-style-type: none;
@@ -93,6 +91,21 @@ li .tweet_retweet {
 
 }
 
+.column1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.column2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.column3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
 footer {
     background-color: #eee;
     color: #000;
@@ -104,10 +117,20 @@ footer {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 600px) {
-    #container {
-        grid-template-columns: repeat(3, 1fr);
+@media screen and (max-width: 600px) {
+    .column1 {
+        grid-column: 1;
+        grid-row: 1;
     }
 
+    .column2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .column3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
 
 }

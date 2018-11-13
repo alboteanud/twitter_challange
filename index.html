@@ -24,36 +24,34 @@
     
     <main>
         
-        <div id="container">
-            <template id="column_template">
-                <div  class="column" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)"
-                ondrop="handleDrop(event)">
+        <div id="container"> </div>
+
+        <template id="column_template">
+            <div  class="column" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+
                 <div class="profile-container">
                     <img class="profile-img" src="" alt="Profile image">
                     <h4 class="profile-name"></h4>
-                    
                 </div>
-                
+
                 <ul></ul>
+
             </div>
         </template>
+
         <template id="tweet_card_template">
             <li>
-                
                 <hr>
-                
                 <p class="tweet_text"></p>
                 <h6 class="tweet_date"></h6>
                 <a class="tweet_link">Go to tweet</a>
-                <br>
-                <a class="tweet_retweet">Retweet</a>
                 
+                <a class="tweet_retweet">Retweet</a>
             </li>
         </template>
-    </div>
-</div>
-
+    
 </main>
+<script> src="js/registerSW.js"</script>
 <script src="js/utils.js"></script>
 <script src="js/main.js"></script>
 
