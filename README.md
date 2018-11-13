@@ -12,4 +12,7 @@ Install the project dependencies:
 `npm start`
 
 
+## Info
+
+Drag and drop the columns in the webpage
 
