@@ -1,39 +1,69 @@
 <!doctype html>
 <html>
+
 <head>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="theme-color" content="#2196F3">
     <link rel="manifest" href="/manifest.json">
-   
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/main.css">
-
-     <title>Twitter list e</title>
+    
+    <title>Twitter list</title>
 </head>
+
 <body>
     <header>
-        
+        <a href="#container" class="skip-link">Skip to tweets</a>
+        <nav>
+            <h1>Twitter list</h1>
+        </nav>
     </header>
     
     <main>
         
-        <div class="flex-container">
-            <template>
-                <div class="column" draggable="true" ondragstart="handleDragStart(event)" ondrop="handleDrop(event)" ondragover="handleDragOver(event)"></div>
-            </template>
-        </div>
+        <div id="container">
+            <template id="column_template">
+                <div  class="column" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)"
+                ondrop="handleDrop(event)">
+                <div class="profile-container">
+                    <img class="profile-img" src="" alt="Profile image">
+                    <h4 class="profile-name"></h4>
+                    
+                </div>
+                
+                <ul></ul>
+            </div>
+        </template>
+        <template id="tweet_card_template">
+            <li>
+                
+                <hr>
+                
+                <p class="tweet_text"></p>
+                <h6 class="tweet_date"></h6>
+                <a class="tweet_link">Go to tweet</a>
+                <br>
+                <a class="tweet_retweet">Retweet</a>
+                
+            </li>
+        </template>
     </div>
-    
+</div>
+
 </main>
 <script src="js/utils.js"></script>
 <script src="js/main.js"></script>
 
 <footer>
-    
+    Copyright (c) 2018
+    <a href="/">
+        <strong>Twitter list</strong> <br>
+    </a> All Rights Reserved.
 </footer>
 
 </body>
-</html>
 
+</html>

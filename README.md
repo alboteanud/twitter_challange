@@ -17,6 +17,7 @@ Start the static and proxy servers:
 This server will help you to get Twitter's API to send you tweets without you needing to do any authentication.  You don't need to modify server.js at all. 
 
 
+**
 Part II: Minimum Requirements
 
 Use the Twitter API to display three columns containing the last 30 tweets from @MakeSchool, @newsycombinator and @ycombinator. Each tweet should include:
